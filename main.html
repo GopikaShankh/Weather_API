@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <script src='https://unpkg.com/@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.min.js'></script>
+    <link href='https://unpkg.com/@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css' rel='stylesheet' />
+
+    <style>
+        /* Additional styles if needed */
+        #map-container {
+            display: none;
+            /* Initially hide the map */
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="show-current-weather">Current Weather</a></li>
+                <li><a href="#" id="show-forecast">5-Day Forecast</a></li>
+                <li><a href="#" id="show-location">Location</a></li>
+            </ul>
+        </nav>
+        <h1 class="head_weather">Weather Window</h1>
+        <div class="search-bar">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+        
+    </header>
+
+    <main>
+        <div id="city-name-display"></div> 
+
+        <div id="current-weather" class="view">
+            <h2 class="current">Current Weather</h2>
+            <div class="weather-info">
+                <p id="temperature-celsius"></p>
+                <p id="weather-conditions"></p>
+                <img id="weather-icon" src="" alt="">
+            </div>
+        </div>
+
+        <div id="forecast" class="view" style="display: none;">
+            <h2 class="forecast">5-Day Forecast</h2>
+            <div class="forecast-container">
+                <!-- Forecast data will be dynamically added here -->
+            </div>
+        </div>
+
+        <div id="map-container" class="view" style="height: 400px; width: 100%; display: none;"></div> <!-- Map container -->
+    </main>
+    <!--Footer -->
+<footer>
+    <p>@ All rights reserved | Weather Window</p>
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+    </div>
+</footer>
+<!--Footer-->
+</body>
+
+</html>

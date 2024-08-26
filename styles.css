@@ -1,0 +1,194 @@
+/* Global Styles */
+body {
+    height: 100vh;
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    color: white;
+    padding: 20px; 
+    text-align: center;
+    padding-left: 0;
+    margin-top: -40px;
+    font-weight: bold;
+}
+
+.head_weather {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1ecec;
+    color: rgb(32, 30, 30);
+    cursor: pointer;
+}
+
+/* Main Content Styles */
+main {
+    margin: 0 auto;
+    width: 900px;
+    background-image: linear-gradient(to bottom, #1a1a3f, #4e338b, #722f7a);
+    box-shadow: 0 0 10px white;
+    padding-bottom: 60px; /* Make space for the footer */
+}
+
+#city-name-display {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#city-name-display span {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #f8eded;
+}
+
+#current-weather, #forecast {
+    padding: 20px;
+    text-align: center;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-info p {
+    margin: 0 20px;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.forecast-container .day {
+    color: rgb(233, 237, 240);
+    background-color: transparent;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(238, 228, 228);
+    width: 15%;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 400px;
+    }
+    .forecast-container .day {
+        width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 300px;
+    }
+    .forecast-container .day {
+        width: 100%;
+    }
+}
+
+/* Navbar Styles */
+nav {
+    background-image: linear-gradient(to bottom, #1a1a3f, #4e338b, #722f7a);
+    font-family: "Josefin Sans", sans-serif;
+    padding: 40px 0;
+    width: 100vw;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Media Queries for Responsive Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+/* Map Container Styles */
+#map-container {
+    display: none; /* Hide map container by default */
+    height: 400px;
+    width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    position: fixed; /* Fix footer to the bottom of the viewport */
+    bottom: 0;
+    width: 100%;
+    background-color: #4e338b;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for better separation */
+}
